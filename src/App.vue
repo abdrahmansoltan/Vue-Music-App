@@ -1,7 +1,9 @@
 <template></template>
 
 <script>
-export default {};
+export default {
+  name: "APP",
+};
 </script>
 
 <style lang="scss" scoped></style>
