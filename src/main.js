@@ -1,5 +1,6 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
+import { firebaseApp } from "./includes/firebase";
 import veeValidatePlugin from "./includes/validation";
 
 import App from "./App.vue";
@@ -8,10 +9,17 @@ import router from "./router";
 import "./assets/base.css";
 import "./assets/main.css";
 
-const app = createApp(App);
+let app;
+// initialize the app after firebase use cached data if any to authenticate
+firebaseApp.auth().onAuthStateChanged(() => {
+  // check if app is already initialized
+  if (!app) {
+    app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
-app.use(veeValidatePlugin);
+    app.use(createPinia());
+    app.use(router);
+    app.use(veeValidatePlugin);
 
-app.mount("#app");
+    app.mount("#app");
+  }
+});
