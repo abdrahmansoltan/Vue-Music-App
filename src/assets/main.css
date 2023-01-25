@@ -12,3 +12,25 @@ a:hover {
   color: #f59e0b !important;
   fill: #f59e0b !important;
 }
+
+.card-header .fa.text-orange,
+.card .card-header .fas.text-orange {
+  color: #ff5e3a;
+  fill: #ff5e3a;
+}
+
+.introduction-bg {
+  animation: slide 50s linear infinite;
+  will-change: background-position;
+  z-index: -1;
+}
+
+
+@keyframes slide {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -4000px 0;
+  }
+}
