@@ -3,7 +3,7 @@ import "firebase/auth"; // auth module
 import "firebase/firestore"; // db package to store data in firestore-database
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBxbxZ-YG4gIOjtQeSyhcHLhEjw_4P5Law", // it's how we connect to firebase
+  apiKey: `${import.meta.env.VITE_FIREBASE_KEY}`, // it's how we connect to firebase
   authDomain: "music-app-374e3.firebaseapp.com", // URL to send the auth information
   projectId: "music-app-374e3",
   storageBucket: "music-app-374e3.appspot.com", // bucket where data is stored
