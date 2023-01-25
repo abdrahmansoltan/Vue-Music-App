@@ -1,6 +1,7 @@
 import firebase from "firebase/app";
 import "firebase/auth"; // auth module
 import "firebase/firestore"; // db package to store data in firestore-database
+import "firebase/storage";
 
 const firebaseConfig = {
   apiKey: `${import.meta.env.VITE_FIREBASE_KEY}`, // it's how we connect to firebase
@@ -15,10 +16,12 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 // Services
 const db = firebaseApp.firestore();
+const storage = firebase.storage();
 
 // Bucket: physical location where data is stored
 // Collection: objects in firestore (data you store in DB (User, Songs, etc..))
 // Documents: objects in DB
 const usersCollection = db.collection("users");
+const songsCollection = db.collection("songs");
 
-export { firebaseApp, db, usersCollection };
+export { firebaseApp, db, usersCollection, songsCollection, storage };
