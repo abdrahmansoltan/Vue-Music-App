@@ -1,5 +1,6 @@
 <template>
   <app-header />
+  <router-view />
   <app-auth />
 </template>
 
