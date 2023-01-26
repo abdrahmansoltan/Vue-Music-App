@@ -3,7 +3,8 @@ a {
 }
 
 /* text-yellow-500 */
-a:hover {
+a:hover,
+.router-link:hover {
   color: #f59e0b;
   text-decoration: none;
 }
@@ -25,6 +26,54 @@ a:hover {
   z-index: -1;
 }
 
+#playlist li:first-child {
+  padding-top: 25px;
+}
+
+.upload-dropbox.upload-dropbox-drag {
+  color: #fff;
+  background-color: #20d862;
+  border-color: #20d862;
+  border-style: solid;
+}
+
+input[type="file"] {
+  margin-top: 20px;
+}
+
+.progress-bar {
+  background-size: 1rem 1rem;
+  background-image: linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+.music-bg {
+  animation: slide 50s linear infinite;
+  will-change: background-position;
+}
+
+.player-container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -10px 15px 3px,
+    rgba(0, 0, 0, 0.05) 0px -4px 6px 2px;
+}
+
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 1rem 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
 
 @keyframes slide {
   0% {
