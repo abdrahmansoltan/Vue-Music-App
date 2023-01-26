@@ -1,17 +1,25 @@
 <template>
   <app-header />
-  <router-view />
+
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
+
+  <app-player />
   <app-auth />
 </template>
 
 <script>
 import AppHeader from "@/components/AppHeader.vue";
+import AppPlayer from "@/components/Player.vue";
 import { mapWritableState } from "pinia";
 import AppAuth from "./components/AppAuth.vue";
 import { firebaseApp } from "./includes/firebase";
 import { useUserStore } from "./stores/user";
 export default {
-  components: { AppHeader, AppAuth },
+  components: { AppHeader, AppAuth, AppPlayer },
   name: "APP",
   computed: {
     ...mapWritableState(useUserStore, ["userLoggedIn"]),
@@ -25,4 +33,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.fade-enter-from {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: all 0.5s linear;
+}
+
+.fade-leave-to {
+  transition: all 0s linear;
+  opacity: 0;
+}
+</style>
