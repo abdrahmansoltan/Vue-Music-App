@@ -1,0 +1,36 @@
+{
+  "header": {
+    "about": "About",
+    "login-register": "Login / Register",
+    "manage": "Manage",
+    "logout": "Logout"
+  },
+  "home": {
+    "listen-heading": "Listen to Great Music!",
+    "listen-text": "Listen to music uploaded by users, Upload your favorite music now and share them with others!",
+    "songs-heading": "Songs"
+  },
+  "song": {
+    "comment_count": "No comments | 1 comment | {count} comments",
+    "latest": "Latest",
+    "oldest": "Oldest"
+  },
+  "auth": {
+    "auth-header": "Your Account",
+    "login": "Login",
+    "register": "Register",
+    "name": "Name",
+    "email": "Email",
+    "age": "Age",
+    "password": "Password",
+    "confirm-password": "Confirm Password",
+    "country": "Country",
+    "tos": "Accept terms of service",
+    "submit": "Submit"
+  },
+  "manage": {
+    "upload": "Upload",
+    "drop_file": "Drop your files here",
+    "my_songs": "My Songs"
+  }
+}

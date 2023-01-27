@@ -1,0 +1,36 @@
+{
+  "header": {
+    "about": "À propos de",
+    "login-register": "Connexion / Enregistrer",
+    "manage": "Gérer",
+    "logout": "Se déconnecter"
+  },
+  "home": {
+    "listen-heading": "Écoutez de la bonne musique!",
+    "listen-text": "Écoutez de la musique téléchargée par les utilisateurs, téléchargez votre musique préférée maintenant et partagez-la avec d'autres!",
+    "songs-heading": "Chansons"
+  },
+  "song": {
+    "comment_count": "Sans commentaires | 1 commentaire | {count} commentaires",
+    "latest": "Dernier",
+    "oldest": "Le plus ancien"
+  },
+  "auth": {
+    "auth-header": "Votre compte",
+    "login": "Connexion",
+    "register": "Enregistrer",
+    "name": "Nom",
+    "email": "E-mail",
+    "age": "Âge",
+    "password": "Mot de passe",
+    "confirm-password": "Confirmez le mot de passe",
+    "country": "Pays",
+    "tos": "Accepter les conditions d'utilisation",
+    "submit": "Soumettre"
+  },
+  "manage": {
+    "upload": "Télécharger",
+    "drop_file": "Déposez vos fichiers ici",
+    "my_songs": "Mes chansons"
+  }
+}
