@@ -1,6 +1,7 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 import { firebaseApp } from "./includes/firebase";
+import i18n from "./includes/i18n";
 import veeValidatePlugin from "./includes/validation";
 
 import App from "./App.vue";
@@ -20,6 +21,7 @@ firebaseApp.auth().onAuthStateChanged(() => {
     app.use(createPinia());
     app.use(router);
     app.use(veeValidatePlugin);
+    app.use(i18n);
     app.directive("icon", Icon);
 
     app.mount("#app");
