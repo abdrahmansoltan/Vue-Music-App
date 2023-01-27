@@ -18,6 +18,11 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
 const storage = firebase.storage();
 
+// cache copy of the firebase-database in the browser for offline PWA use
+db.enablePersistence().catch((error) => {
+  console.log(`Firebase persistence error ${error.code}`);
+});
+
 // Bucket: physical location where data is stored
 // Collection: objects in firestore (data you store in DB (User, Songs, etc..))
 // Documents: objects in DB

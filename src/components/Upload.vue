@@ -74,6 +74,18 @@ export default {
         if (!supportedFormats.includes(file.type)) {
           return;
         }
+        // prevent uploading when user is offline (PWA)
+        if (!navigator.onLine) {
+          this.uploads.push({
+            task: {},
+            current_progress: 100,
+            name: file.name,
+            variant: "bg-red-400",
+            icon: "fas fa-times",
+            text_class: "text-red-400",
+          });
+          return;
+        }
 
         // References (objects that point to a location in the app)
         const storageRef = storage.ref(); // "music-app-374e3.appspot.com", -> bucket where data is stored
