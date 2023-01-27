@@ -10,7 +10,7 @@
   <vee-form :validation-schema="loginSchema" @submit="login">
     <!-- Email -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Email</label>
+      <label class="inline-block mb-2">{{ $t("auth.email") }}</label>
       <vee-field
         name="email"
         type="email"
@@ -21,7 +21,7 @@
     </div>
     <!-- Password -->
     <div class="mb-3">
-      <label class="inline-block mb-2">Password</label>
+      <label class="inline-block mb-2">{{ $t("auth.password") }}</label>
       <vee-field
         name="password"
         type="password"
@@ -35,7 +35,7 @@
       class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition hover:bg-purple-700"
       :disabled="login_in_submission"
     >
-      Submit
+    {{ $t("auth.submit") }}
     </button>
   </vee-form>
 </template>
