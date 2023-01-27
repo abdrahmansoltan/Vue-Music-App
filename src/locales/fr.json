@@ -10,6 +10,11 @@
     "listen-text": "Écoutez de la musique téléchargée par les utilisateurs, téléchargez votre musique préférée maintenant et partagez-la avec d'autres!",
     "songs-heading": "Chansons"
   },
+  "about": {
+    "heading": "Application musicale créée avec ",
+    "main-text": "Construire avec ",
+    "footer": "Créé par "
+  },
   "song": {
     "comment_count": "Sans commentaires | 1 commentaire | {count} commentaires",
     "latest": "Dernier",

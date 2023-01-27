@@ -10,6 +10,11 @@
     "listen-text": "Listen to music uploaded by users, Upload your favorite music now and share them with others!",
     "songs-heading": "Songs"
   },
+  "about": {
+    "heading": "Music app created with ",
+    "main-text": "Build with ",
+    "footer": "Created by "
+  },
   "song": {
     "comment_count": "No comments | 1 comment | {count} comments",
     "latest": "Latest",
