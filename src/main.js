@@ -1,4 +1,5 @@
 import { createPinia } from "pinia";
+import { registerSW } from "virtual:pwa-register";
 import { createApp } from "vue";
 import { firebaseApp } from "./includes/firebase";
 import i18n from "./includes/i18n";
@@ -10,6 +11,9 @@ import router from "./router";
 
 import "./assets/base.css";
 import "./assets/main.css";
+
+// Load and Register the PWA Service Worker
+registerSW({ immediate: true });
 
 let app;
 // initialize the app after firebase use cached data if any to authenticate
